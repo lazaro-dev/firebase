@@ -21,6 +21,7 @@ body {
 }
 
 nav {
+  z-index: 2;
   width: 100%;
   position: sticky;    
   top: 0; 
@@ -130,7 +131,6 @@ section {
 
 footer {
   margin-top: 13rem;
-  position: sticky;
   bottom: 0;  
   display: flex;
   justify-content: center; 
