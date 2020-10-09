@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link href="./css/styles.css" rel="stylesheet">    
+    <title>Atividade Menu Aderente</title>
+  </head>
+  <body>    
+    
+    <header >
+      
+    </header>
+
+    <nav>
+      <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#listagem">Lista pessoas</a></li>
+            <li><a href="#cad">Cadastro</a></li>  
+            <li><a href="#footer">Contato</a></li>
+        </ul>
+    </nav>    
+
+    <section>
+      <div id="cad" class="cadastro">
+        <form class="form" preventdefault>
+
+          <div class="u-margin-bottom-medium">
+              <h2 class="heading-secondary">
+                  Start booking now
+              </h2>
+          </div>
+
+          <div class="form__group">
+              <input type="text" class="form__input" placeholder="Nome" id="name" required>                
+          </div>
+          
+          <div class="form__group">
+              <input type="email" class="form__input" placeholder="Email" id="email" required>          
+          </div>           
+
+          <div class="form__group">
+              <button class="btn btn--green" id="btnForm">Salvar&rarr;</button>
+          </div>
+      </form>
+      </div>
+      
+      <div class="listagem">      
+        <h2 >
+          Lista dinâmica
+        </h2>  
+        <!-- lista criada dinâmicamente -->
+        <ul id="lista"></ul>
+      </div>
+    </section>
+
+
+
+    
+    <footer>
+      <p>
+        Lázaro José Marques Sobral
+      </p> 
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <p>
+        Email: lazaro.sobral@facape.br
+      </p> 
+    </footer>        
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+    <script src="./js/firebaseInfo.js"></script>
+    <script src="./js/script.js"></script>    
+  </body>
+</html>
