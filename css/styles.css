@@ -5,6 +5,8 @@
   --color-primary-light-0: #008080;
   --color-primary-light-1: #82ffe4;
   --color-primary-light-2: #befff5;
+  --color-white: #fff;
+  --color-black: #000;
 }
   
 * {
@@ -16,7 +18,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(/img/background.jpg);
+  background-image: url(../img/background.jpg);
   /* background-color: khaki; */
 }
 
@@ -122,7 +124,7 @@ section {
 
 .btn--green {
   background-image: linear-gradient(to right, var(--color-primary-light-0), var(--color-primary-light-1));
-  color: #fff;   
+  color: var(--color-white);   
 }
 
 .btn:hover {
@@ -134,9 +136,9 @@ footer {
   bottom: 0;  
   display: flex;
   justify-content: center; 
-  background-color: #000;
+  background-color: var(--color-black);
   padding: 1rem 0;
   font-size: 1.3rem;
-  color: #f7f7f7; 
-  border: .14rem solid #fff;
+  color: var(--color-white); 
+  border: .14rem solid var(--color-white);
 }
