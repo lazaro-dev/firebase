@@ -38,7 +38,7 @@ firebase.database().ref('cadastro').on('value', snapshot => {
     });
 })
 
- const deleted = (user) => {
+const deleted = (user) => {
     let id = user.getAttribute("clica");
     firebase.database().ref('cadastro/'+id).remove();
- }
+}
