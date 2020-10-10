@@ -10,4 +10,4 @@
     measurementId: "G-RQQWRNGQR5"
 };
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();

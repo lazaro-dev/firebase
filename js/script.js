@@ -19,7 +19,7 @@ document.getElementById('btnForm').addEventListener(
             emailIn: emailIn.value,            
         };
 
-        return firebase.database().ref().child('cadastro').push(cadastro).key;
+        firebase.database().ref().child('cadastro').push(cadastro).key;
     });
 })()
 
@@ -27,7 +27,18 @@ firebase.database().ref('cadastro').on('value', snapshot => {
     lista.innerHTML="";
     snapshot.forEach(item => {
         let li = document.createElement('li');
+        let btn = document.createElement('button');
         li.appendChild(document.createTextNode(item.val().name +' => ' + item.val().emailIn));
-        lista.appendChild(li);
+        lista.appendChild(li);        
+        btn.setAttribute('clica', item.key);
+        btn.setAttribute('class', 'btn btn--green2');
+        btn.appendChild(document.createTextNode("Deletar"));
+        btn.setAttribute('onclick', 'deleted(this)');
+        li.appendChild(btn);        
     });
 })
+
+ const deleted = (user) => {
+    let id = user.getAttribute("clica");
+    firebase.database().ref('cadastro/'+id).remove();
+ }
